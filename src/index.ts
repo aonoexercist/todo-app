@@ -1,7 +1,9 @@
 import { Elysia } from "elysia";
+import { todoRoutes } from "./routes/todo";
 
-const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
+const app = new Elysia()
+  .use(todoRoutes)
+  .get("/", () => "Elysia + Drizzle + Postgres 🚀")
+  .listen(3000);
 
-console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
-);
+console.log(`Server running at http://localhost:3000`);
