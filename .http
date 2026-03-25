@@ -1,0 +1,28 @@
+GET http://localhost:3000/todos HTTP/1.1
+content-type: application/json
+
+
+### 
+POST http://localhost:3000/todos HTTP/1.1
+content-type: application/json
+{
+  "title": "Dog food"
+}
+
+
+###
+GET http://localhost:3000/todos/1 HTTP/1.1
+content-type: application/json
+
+
+###
+PUT http://localhost:3000/todos/1 HTTP/1.1
+content-type: application/json
+{
+  "completed": true
+}
+
+
+### 
+DELETE http://localhost:3000/todos/2 HTTP/1.1
+content-type: application/json
